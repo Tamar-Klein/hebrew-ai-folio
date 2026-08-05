@@ -21,7 +21,7 @@ export function ProjectDialog({ project, open, onOpenChange }: Props) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         dir="rtl"
-        className="glass-panel max-h-[90vh] max-w-4xl overflow-y-auto rounded-2xl p-0 text-right"
+        className="glass-panel max-h-[90vh] max-w-5xl overflow-y-auto rounded-2xl p-0 text-right"
       >
         {project && (
           <div className="p-6 sm:p-8">
