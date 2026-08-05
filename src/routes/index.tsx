@@ -9,16 +9,16 @@ import { projects, type Project } from "@/data/projects";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "מהנדס תוכנה AI | תיק עבודות" },
+      { title: "מפתחת AI | תיק עבודות – Tax Technology" },
       {
         name: "description",
         content:
-          "תיק עבודות של מהנדס תוכנה AI: מערכות RAG, סוכנים חכמים, ראייה ממוחשבת ועיבוד שפה בעברית.",
+          "תיק עבודות של מפתחת AI: ארכיטקטורת RAG, סוכנים אוטונומיים, Prompt Engineering ואינטגרציות API.",
       },
-      { property: "og:title", content: "מהנדס תוכנה AI | תיק עבודות" },
+      { property: "og:title", content: "מפתחת AI | תיק עבודות – Tax Technology" },
       {
         property: "og:description",
-        content: "פרויקטים נבחרים בבינה מלאכותית גנרטיבית — מהמחקר ועד לפרודקשן.",
+        content: "פרויקטים נבחרים: GEO RADAR, Event-Driven RAG, MCP Browser Agent ועוד.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -51,10 +51,13 @@ function Index() {
           </header>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} onOpen={() => openProject(project)} />
+            {projects.map((project, i) => (
+              <div key={project.id} className={i === 0 ? "sm:col-span-2" : undefined}>
+                <ProjectCard project={project} onOpen={() => openProject(project)} />
+              </div>
             ))}
           </div>
+
         </section>
       </main>
 

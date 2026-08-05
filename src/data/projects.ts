@@ -2,6 +2,7 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import project5 from "@/assets/project-5.jpg";
 
 export type Project = {
   id: string;
@@ -10,6 +11,7 @@ export type Project = {
   description: string;
   tags: string[];
   image: string;
+  featured?: boolean;
   videoUrl: string;
   slidesUrl: string;
   githubUrl: string;
@@ -18,52 +20,70 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "rag-assistant",
-    title: "עוזר ידע ארגוני מבוסס RAG",
-    short: "מנוע חיפוש סמנטי מעל אלפי מסמכים ארגוניים עם תשובות מעוגנות במקורות.",
+    id: "geo-radar",
+    title: "GEO RADAR - מקום 1 בהאקתון AI",
+    short:
+      "פלטפורמה לזיהוי ואופטימיזציה של נוכחות מותג במודלי שפה (LLM as a Judge).",
     description:
-      "מערכת RAG מלאה: אינדוקס מסמכים, חלוקה חכמה לצ'אנקים, אמבדינגס ווקטור-סטור, ושכבת דירוג מחדש (re-ranking) לשיפור הדיוק. הממשק מציג ציטוטים למקור עבור כל תשובה, כולל מדידת הזיות והערכה אוטומטית של איכות התשובות.",
-    tags: ["Python", "LangChain", "RAG", "pgvector", "FastAPI"],
+      "פלטפורמה לזיהוי ואופטימיזציה של נוכחות מותג במודלי שפה (LLM as a Judge). המערכת מבצעת הנדסה לאחור לתהליך החשיבה של Claude, Gemini ו-ChatGPT. הפרויקט כולל מנגנון דטרמיניסטי מבוסס Python למניעת הזיות (Hallucinations) והפקת תוכנית פעולה אופרטיבית להנדסת תוכן.",
+    tags: ["Claude API", "Python", "AI Evaluation", "Data Analytics"],
     image: project1,
+    featured: true,
     videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
     slidesUrl: "https://docs.google.com/presentation/d/e/placeholder/embed",
     githubUrl: "https://github.com",
     slidesFullUrl: "https://docs.google.com/presentation",
   },
   {
-    id: "agent-pipeline",
-    title: "צוות סוכני AI לאוטומציית תהליכים",
-    short: "ארכיטקטורת סוכנים מרובי-שלבים עם כלים, זיכרון ובקרת איכות.",
+    id: "event-driven-rag",
+    title: "מערכת ידע אסטרטגית - Event-Driven RAG",
+    short:
+      "מערכת RAG מבוססת LlamaIndex לאינדוקס וניתוח קבצי תצורה עם חיפוש סמנטי מתקדם.",
     description:
-      "פלטפורמה לתזמור סוכנים אוטונומיים: תכנון משימות, קריאה לכלים חיצוניים, זיכרון ארוך-טווח ומנגנון ביקורת עצמית. כוללת מעקב מלא (tracing), ניהול עלויות טוקנים ומדיניות fallback בין מודלים.",
-    tags: ["LLMs", "Agents", "TypeScript", "Node.js", "OpenAI"],
+      "פיתוח מערכת RAG מורכבת מבוססת LlamaIndex לאינדוקס וניתוח קבצי תצורה. כולל חיפוש סמנטי (Pinecone & Cohere), חילוץ נתונים מובנים (Structured Data Extraction) ומנגנון Routing מתקדם להבחנה בין שליפה סמנטית לשאילתות לוגיות.",
+    tags: ["LlamaIndex", "Pinecone", "Cohere", "RAG", "Python"],
     image: project2,
+    featured: true,
     videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
     slidesUrl: "https://docs.google.com/presentation/d/e/placeholder/embed",
     githubUrl: "https://github.com",
     slidesFullUrl: "https://docs.google.com/presentation",
   },
   {
-    id: "vision-qc",
-    title: "בקרת איכות בראייה ממוחשבת",
-    short: "זיהוי פגמים בזמן אמת בקו ייצור בעזרת מודל ויז'ן מותאם.",
+    id: "mcp-browser-agent",
+    title: "סוכן דפדפן אוטונומי - MCP Browser Agent",
+    short: "שרת MCP המעניק למודלי שפה שליטה בדפדפן לחילוץ נתונים בזמן אמת.",
     description:
-      "מודל זיהוי אובייקטים שאומן על דאטהסט תעשייתי ייעודי, כולל אוגמנטציות, כיול סף ואופטימיזציה להרצה על הקצה (edge). המערכת מספקת דשבורד ניטור, התראות בזמן אמת ומדדי דיוק מתמשכים.",
-    tags: ["PyTorch", "Computer Vision", "ONNX", "Docker"],
+      "שרת MCP מתקדם המעניק למודלי שפה יכולות שליטה בדפדפן (Playwright) לחילוץ נתונים מורכבים בזמן אמת, כולל יכולות RAG פנימיות להעשרת הקונטקסט, ללא התערבות משתמש.",
+    tags: ["MCP SDK", "Playwright", "Anthropic API", "Automation"],
     image: project3,
+    featured: true,
     videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
     slidesUrl: "https://docs.google.com/presentation/d/e/placeholder/embed",
     githubUrl: "https://github.com",
     slidesFullUrl: "https://docs.google.com/presentation",
   },
   {
-    id: "voice-analytics",
-    title: "ניתוח שיחות קול בעברית",
-    short: "תמלול, סיכום וזיהוי כוונות לשיחות שירות בעברית.",
+    id: "prompt-lab",
+    title: "מעבדת מחקר - Prompt Engineering",
+    short: "סביבת מחקר להמרת שפה טבעית לפקודות מערכת (CLI) עם מטריקות הערכה.",
     description:
-      "פייפליין קולי מקצה לקצה: תמלול בעברית, דיאריזציה של דוברים, סיכום אוטומטי וחילוץ כוונות ותובנות עסקיות. התוצרים נשמרים במאגר מובנה ומוזרמים לדשבורד ניהולי לזיהוי מגמות.",
-    tags: ["Whisper", "NLP", "React", "Python", "Supabase"],
+      "סביבת מחקר מתקדמת להמרת שפה טבעית לפקודות מערכת (CLI). הפרויקט מציג מתודולוגיה איטרטיבית לשיפור פרומפטים, ניהול מקרי קצה, בניית מטריקות הערכה (LLM Evaluation) והרצת קוד ב-Sandbox מאובטח.",
+    tags: ["Prompt Engineering", "Gradio", "Testing", "Docker"],
     image: project4,
+    videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
+    slidesUrl: "https://docs.google.com/presentation/d/e/placeholder/embed",
+    githubUrl: "https://github.com",
+    slidesFullUrl: "https://docs.google.com/presentation",
+  },
+  {
+    id: "task-agent",
+    title: "Task Management AI Agent",
+    short: "בוט חכם לניהול משימות המנתח שפה טבעית ומפעיל פונקציות מערכת.",
+    description:
+      "בוט חכם לניהול משימות המנתח שפה טבעית ומפעיל פונקציות מערכת (Function Calling) לשליפה, עדכון ומחיקת משימות תוך ניהול תורים וקבלת החלטות עצמאית.",
+    tags: ["FastAPI", "OpenAI API", "React", "Agentic Workflow"],
+    image: project5,
     videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
     slidesUrl: "https://docs.google.com/presentation/d/e/placeholder/embed",
     githubUrl: "https://github.com",
