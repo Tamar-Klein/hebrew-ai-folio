@@ -51,10 +51,13 @@ function Index() {
           </header>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} onOpen={() => openProject(project)} />
+            {projects.map((project, i) => (
+              <div key={project.id} className={i === 0 ? "sm:col-span-2" : undefined}>
+                <ProjectCard project={project} onOpen={() => openProject(project)} />
+              </div>
             ))}
           </div>
+
         </section>
       </main>
 
