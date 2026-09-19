@@ -13,12 +13,14 @@ export function Hero() {
 
       <div className="mx-auto flex min-h-[92vh] max-w-6xl flex-col items-center justify-center px-6 text-center">
         <span className="reveal glass-panel rounded-full px-4 py-1.5 text-xs tracking-wide text-muted-foreground">
-          Tax Technology · AI Engineering
+           AI Engineering
         </span>
-
-        <h1 className="reveal mt-8 font-display text-5xl leading-[1.15] font-bold tracking-tight text-balance sm:text-6xl md:text-7xl">
-          מפתחת <span className="text-gradient">AI</span>
+<h1 className="reveal mt-8 font-display text-5xl leading-[1.15] font-bold tracking-tight text-balance sm:text-6xl md:text-7xl">
+           <span className="text-gradient">תמר קליין</span>
         </h1>
+        <h2 className="reveal mt-8 font-display text-5xl leading-[1.15] font-bold tracking-tight text-balance sm:text-6xl md:text-7xl">
+          מפתחת <span className="text-gradient">AI</span>
+        </h2>
 
         <p className="reveal mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           מתמחה בארכיטקטורת RAG, פיתוח סוכני AI אוטונומיים, Prompt Engineering מתקדם ואינטגרציות
@@ -30,9 +32,7 @@ export function Hero() {
             צפו בפרויקטים
             <ArrowLeft className="size-4" />
           </Button>
-          <Button variant="glass" size="xl" asChild>
-            <a href="#contact">דברו איתי</a>
-          </Button>
+       
         </div>
 
         <dl className="reveal mt-16 grid w-full max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
